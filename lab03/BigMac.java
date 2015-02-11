@@ -26,18 +26,21 @@ public class BigMac{
         //Calculate Sales Tax
         System.out.println("Enter the percent tax as  whole number(xx): ");
         double taxRate = myScanner.nextDouble();
-            taxRate /= 100;
-            
-       //Output 
+            taxRate /= 100; // This is an example of combining division with an assignment operator to store a new value within the variable taxRate
+                            // i.e. 7/100 = 0.07 = taxRate
+        
+       //Declaring Variables
         double cost$;
         int dollars, dimes, pennies;
         
+        //Calculations
         cost$ = nBigMacs * bigMac$ * (1+taxRate);
         dollars = (int)cost$;
         dimes = (int)(cost$*10)%10;
         pennies = (int)(cost$*100)%10;
         
-        System.out.println("The Total cost of" + nBigMacs + " Big Macs at $" + bigMac$ + " per Big Mac, with a sales tax of " + 
+        //Output
+        System.out.println("The Total cost of " + nBigMacs + " Big Macs at $" + bigMac$ + " per Big Mac, with a sales tax of " + 
         
         (int)(taxRate*100) + "%, is $" + dollars + '.' + dimes + pennies);
         
