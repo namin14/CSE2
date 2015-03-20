@@ -36,7 +36,7 @@ public class waves{
         System.out.println("While loop");
         int i = 1;
         
-        while(i<= limit){
+        while(i <= limit){
         
             if(i%2 == 0){
                 String temp = "";
