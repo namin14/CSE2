@@ -12,8 +12,9 @@ public class Factorials{
         System.out.println("Enter a number");
         int input = myScanner.nextInt();
         int sum = 0;
+        
         //Process
-        sum += factorial(input);
+        sum = factorial(input);
         
         String message = print(input, sum);
         System.out.println(message);

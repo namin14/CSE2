@@ -27,7 +27,7 @@ public class waves{
             int limit = myScanner.nextInt(); 
             int trialRun2 = 1;
 
-        while(trialRun2 >0){
+        while(trialRun2 > 0){
             
         if(1 <= limit && limit <= 30){
     
@@ -69,6 +69,7 @@ public class waves{
         //For loop
         System.out.println("");
         System.out.println("For Loop");
+        
         //Declare For-loop variables
         int j, k;
         
