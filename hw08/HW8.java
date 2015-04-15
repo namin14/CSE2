@@ -161,11 +161,11 @@ public class HW8{
         
         while(scan.hasNextInt()){
             progress3 = scan.nextInt();
+            
             switch(progress3){
             
                 case 1:
                 System.out.println("Congratulations! You have a 4.00 gpa ");
-                System.exit(1);
                 break;
             
                 case 2:
