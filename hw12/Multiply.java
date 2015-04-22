@@ -125,7 +125,7 @@ public class Multiply{
 
         for(int i=0; i<matrix.length; i++){
             for(int j=0; j<matrix[0].length; j++){
-                input = -10 + entry.nextInt(20);
+                input = -10 + entry.nextInt(21);
                 matrix[i][j] = input;
             }
             //System.out.print("\n");
