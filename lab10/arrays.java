@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class arrays{
     
@@ -16,15 +17,22 @@ public class arrays{
         int[] newArray;
         newArray = new int[arraySize];
         
-        System.out.println("Please enter "+arraySize+ " positive integer: ");
-        //int numberInput = myScanner.nextInt();
-        for(int i = 1; i<=arraySize; i++){
-            int numberInput = myScanner.nextInt();
-            int correctInput = check(numberInput, myScanner);
-            newArray[i] = correctInput;
+        System.out.println("Please enter "+arraySize+ " positive integers: ");
+        for(int i = 0; i<newArray.length; i++){
+            
+            if(myScanner.hasNextInt()){
+                int numberInput = myScanner.nextInt();
+                int correctInput = check(numberInput, myScanner);
+                newArray[i] = correctInput;
+            }
+            else{
+                double badInput = myScanner.nextDouble();
+                System.out.println("Please enter an integer instead of a double");
+                i--;
+            }
         }
         
-        System.out.println("The array is:" + newArray);
+        System.out.println("The array is:" + Arrays.toString(newArray));
         
     }
     
@@ -33,15 +41,16 @@ public class arrays{
         int y = 0;
         if(x>=0){
             y = x;
-            //return x;
         }
     
         else if(x<0){
+            int badInput = x;//myScanner.nextInt();
             System.out.println("Sorry the number you entered is negative");
             int numberInput = myScanner.nextInt();
-            int x = check(numberInput, myScanner);
-            //return x;
+            y = check(numberInput, myScanner);
         }
+        
         return y;
     }
+    
 }

@@ -54,6 +54,7 @@ public class waves{
                 while(j<=i && j>0){
                     String temp = "";
                     int k = 0;
+                    
                     while(k<j){
                     temp = i + temp +" ";
                     //System.out.println(temp);

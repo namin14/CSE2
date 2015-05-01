@@ -78,27 +78,32 @@ public class Cookies{
             }
         
     //How cookies are divided
-    int remainder = (cookies % share);
+    //people * share = x
+    //cookies/x
+    //if statements
+    int remainder = 0;
+    int x = people * share;
+    remainder = (cookies / x);
     
-        if (share == 0)
-            System.out.println("You have enough cookies for each person and the amount will divide evenly");
+        //if (share == 0)
+            //System.out.println("You have enough cookies for each person and the amount will divide evenly");
             
-        else if(share > 0 && remainder == 0)
+        if(remainder == 0)
             System.out.println("You have enough cookies for each person and the amount will divide evenly.");
             
-        else if(share > 0 && remainder - share == 0)
-            System.out.println("You have enough cookies for each person and the amount will divide evenly.");
+        //else if(share > 0 && remainder - share == 0)
+            //System.out.println("You have enough cookies for each person and the amount will divide evenly.");
             
-        else if(share > 0 && remainder < people)
+        else if(remainder < people){
             System.out.println("You have enough cookies for each person but the amount will not divide evenly.");
-            
-            else{ 
-                int needed;
-                needed = (people * share) - cookies;
-                System.out.println("You do not have enough cookies. You will need to buy " + needed + " more.");
-                return;
+        }    
+        else{ 
+            int needed;
+            needed = (people * share) - cookies;
+            System.out.println("You do not have enough cookies. You will need to buy " + needed + " more.");
+            return;
             }
-            
+           
 
     }   //End of Main
     
