@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class methods{
     
@@ -6,34 +7,51 @@ public class methods{
         
         //Declare random object
         Random number = new Random();
-        int q = 0;
-        int limit = number.nextInt(10);
         
+        //Declare scanner
+        Scanner myScanner;
+        myScanner = new Scanner(System.in);
+        
+        //Declare variables
+        int q = 0;
+        int limit = 6;// + number.nextInt(10);
+        int counter = 1;
+        String A ="";
+        String sentence ="";
+        
+        while(counter > 0){
         for(int i = 0; i<limit; i++){
             int j = number.nextInt(4);
             
             if(j == 0){
-                String A = adjective(number);
+                A = adjective(number);
             }
             else if(j == 1){
-                String A = subject(number);
+                A = subject(number);
             }
             else if(j == 2){
-                String A = pastTense(number) + "the";
+                A = pastTense(number) + " the ";
             }
             else if(j == 3){
-                String A = "the" + object(number);
+                A =  object(number);
             }
             
-            String B = A;
-            String sentence += B;
+            sentence = sentence + A + " ";
+        }
+        System.out.println(limit);
+        System.out.println("The " + sentence + "" + object(number) + ".");
+        System.out.println("Generate a new sentence? Y or y for yes: ");
+        
+        String answer = myScanner.next();
+        if(answer.equals("Y") || answer.equals("y")){
+            sentence = "";
+            continue;
         }
         
-        System.out.println("The" + sentence + " " + object(number) + ".");
-        
-        
-        
-        
+        else {
+            break;
+        }
+        }    
     }
     
     //Adjective
@@ -44,43 +62,43 @@ public class methods{
         switch(q){
                         
             case 0:
-            k = " quick ";
+            k = "quick";
             break;
                     
             case 1:
-            k = " brown ";
+            k = "brown";
             break;
                     
             case 2:
-            k = " strange ";
+            k = "strange";
             break;
                     
             case 3:
-            k = " bored ";
+            k = "bored";
             break;
                     
             case 4:
-            k = " happy ";
+            k = "happy";
             break;
                     
             case 5:
-            k = " sad ";
+            k = "sad";
             break;
                     
             case 6:
-            k = " pink ";
+            k = "pink";
             break;
                     
             case 7:
-            k = " wise ";
+            k = "wise";
             break;
                     
             case 8:
-            k = " tired ";
+            k = "tired";
             break;
                     
             case 9:
-            k = " ugly ";
+            k = "ugly";
             break;
         }//End of Switch
                     
@@ -95,43 +113,43 @@ public class methods{
         switch(q){
                         
             case 0:
-            k = " cow ";
+            k = "cow";
             break;
                     
             case 1:
-            k = " horse ";
+            k = "horse";
             break;
                     
             case 2:
-            k = " fox ";
+            k = "fox";
             break;
                     
             case 3:
-            k = " person ";
+            k = "person";
             break;
                     
             case 4:
-            k = " bird ";
+            k = "bird";
             break;
                     
             case 5:
-            k = " spider ";
+            k = "spider";
             break;
                     
             case 6:
-            k = " dinosaur ";
+            k = "dinosaur";
             break;
                     
             case 7:
-            k = " boar ";
+            k = "boar";
             break;
                     
             case 8:
-            k = " dog ";
+            k = "dog";
             break;
                     
             case 9:
-            k = " cat ";
+            k = "cat";
             break;
         }//End of Switch
                     
@@ -146,23 +164,23 @@ public class methods{
         switch(q){
                         
             case 0:
-            k = " jumped ";
+            k = "jumped";
             break;
                     
             case 1:
-            k = " walked to ";
+            k = "walked to";
             break;
                     
             case 2:
-            k = " followed ";
+            k = "followed";
             break;
                     
             case 3:
-            k = " hugged ";
+            k = "hugged";
             break;
                     
             case 4:
-            k = " ate ";
+            k = "ate";
             break;
                     
             case 5:
@@ -170,19 +188,19 @@ public class methods{
             break;
                     
             case 6:
-            k = " helped ";
+            k = "helped";
             break;
                     
             case 7:
-            k = " listened to ";
+            k = "listened to";
             break;
                     
             case 8:
-            k = " talked to ";
+            k = "talked to";
             break;
                     
             case 9:
-            k = " ignored ";
+            k = "ignored";
             break;
         }//End of Switch
                     
@@ -197,43 +215,43 @@ public class methods{
         switch(q){
                         
             case 0:
-            k = " cow ";
+            k = "cow";
             break;
                     
             case 1:
-            k = " horse ";
+            k = "horse";
             break;
                     
             case 2:
-            k = " fox ";
+            k = "fox";
             break;
                     
             case 3:
-            k = " person ";
+            k = "person";
             break;
                     
             case 4:
-            k = " bird ";
+            k = "bird";
             break;
                     
             case 5:
-            k = " spider ";
+            k = "spider";
             break;
                     
             case 6:
-            k = " dinosaur ";
+            k = "dinosaur";
             break;
                     
             case 7:
-            k = " boar ";
+            k = "boar";
             break;
                     
             case 8:
-            k = " dog ";
+            k = "dog";
             break;
                     
             case 9:
-            k = " cat ";
+            k = "cat";
             break;
         }//End of Switch
                     
