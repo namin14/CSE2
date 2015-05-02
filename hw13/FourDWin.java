@@ -93,6 +93,14 @@ public class FourDWin{
         System.out.println(picture1);
         
         //print out sorted array
+        
+        //print out statistics
+        double [] matrixStatistics = statArray(fourDArray);
+        
+        System.out.println("Sum: " + matrixStatistics[0]);
+        System.out.println("Members: " + matrixStatistics[1]);
+        System.out.println("Mean: " + matrixStatistics[2]);
+        
         //-sort 3D array
         double [][][] sort3darray = sort3DArray(fourDArray);
         String picture2 = printArray(sort3darray);
@@ -104,13 +112,6 @@ public class FourDWin{
         //String picture3 = printArray(sort4darray);
         //System.out.println(picture3);
         
-        
-        //print out statistics
-        double [] matrixStatistics = statArray(fourDArray);
-        
-        System.out.println("Sum: " + matrixStatistics[0]);
-        System.out.println("Members: " + matrixStatistics[1]);
-        System.out.println("Mean: " + matrixStatistics[2]);
         
     }//end of main
     
@@ -162,7 +163,7 @@ public class FourDWin{
                         array[row][column][i] = array [row][j][i];
                     }
                     
-                     array[row][j + 1][i] = value;
+                     array[row][j][i] = value;
                 }
                 
 
